@@ -17,13 +17,26 @@ func reverseInt(number int) int {
 	//...but must ensure it's converted to a Slice
 	//slice of runes
 
-	ourSlice := []rune(str)
+	runes := []rune(str)
 
 	//then implement an algo to reverse the elements in our slice of runes
+	n := len(runes) - 1
+	//var temp rune
+
+	for i := n; i >= n-i; i-- {
+
+		for j := n - i; j <= n-i; j++ {
+
+			//now we do the swapping
+			temp := runes[i]
+			runes[i] = runes[j]
+			runes[j] = temp
+		}
+	}
 
 	//now, we convert the reversed slice of runes back to a string
 
-	str1 := string(ourSlice)
+	str1 := string(runes)
 
 	//remember we need to again convert the string back to an integer
 	//num := int(str1)
