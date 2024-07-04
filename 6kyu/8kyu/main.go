@@ -1,7 +1,10 @@
 // this program aims at reversing a string
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 //this function receives a string and returns its Reversed value
 
@@ -35,6 +38,24 @@ func reverseString(str string) string {
 	return ourString
 }
 
+//converting STRING to a Integer NUMBER
+//use methods from strconv package to help with conversion between STRINGS and INTEGERS
+
+func str2Int(str string) {
+
+	fmt.Println("_______________________________________________________")
+
+	fmt.Println("CONVERTING STRING TO INTEGER")
+
+	//STRING to INTEGER we use Atoi() method
+	ourInt, err := strconv.Atoi(str)
+
+	//now return ourInt; already-converted from string
+	fmt.Println("Original string: ", str)
+	fmt.Println("Converted Result (INTEGER) string: ", ourInt)
+
+}
+
 func main() {
 	//prompting user for a string they'd like revrsed
 
@@ -48,4 +69,8 @@ func main() {
 	reverseStr := reverseString(str)
 
 	fmt.Printf("\n OriginalString: %v \n Reversed String: %v\n", str, reverseStr)
+
+	concert := "Reggae"
+	str2Int(concert)
+
 }
