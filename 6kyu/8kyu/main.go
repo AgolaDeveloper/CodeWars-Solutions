@@ -50,9 +50,13 @@ func str2Int(str string) {
 	//STRING to INTEGER we use Atoi() method
 	ourInt, err := strconv.Atoi(str)
 
-	//now return ourInt; already-converted from string
-	fmt.Println("Original string: ", str)
-	fmt.Println("Converted Result (INTEGER) string: ", ourInt)
+	if err != nil {
+		fmt.Printf("\nError Converting %v to an Integer\nERROR!: %v\n", str, err)
+	} else {
+		//now return ourInt; already-converted from string
+		fmt.Println("Original string: ", str)
+		fmt.Println("Converted Result (INTEGER) string: ", ourInt)
+	}
 
 }
 
