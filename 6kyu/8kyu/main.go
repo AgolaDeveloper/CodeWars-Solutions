@@ -124,6 +124,19 @@ func strRepeat(printStr string, intNoTimes int) {
 	}
 }
 
+// defining Grasshopper Summation
+// returns sum of every number from 1 to num
+func hopperSummation(number int) {
+	sum := 0
+	//first range through the numbers between 0 to the number passed to his function
+
+	for i := 1; i <= number; i++ {
+		sum += i
+	}
+
+	fmt.Printf("\nSum of integers from 1 to %v is %v\n", number, sum)
+}
+
 func main() {
 	//prompting user for a string they'd like revrsed
 
@@ -148,5 +161,6 @@ func main() {
 	strRepeat("love", 10)
 
 	squareSum(2, 3, 4, 5, 10)
+	hopperSummation(5)
 
 }
