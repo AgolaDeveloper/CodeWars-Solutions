@@ -102,8 +102,10 @@ func evenOrOdd(num int) {
 }
 
 // defining a squareSum function
+
+// defining a strRepeat function
 // accepting STRING and INT as parameter; then prints string INT number of times
-func squareSum(printStr string, intNoTimes int) {
+func strRepeat(printStr string, intNoTimes int) {
 	//ensure we print our string intNumber Of Time, intNoTimes
 	for i := 0; i < intNoTimes; i++ {
 		fmt.Println(printStr)
