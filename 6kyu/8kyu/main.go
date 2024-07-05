@@ -101,6 +101,15 @@ func evenOrOdd(num int) {
 
 }
 
+// defining a squareSum function
+// accepting STRING and INT as parameter; then prints string INT number of times
+func squareSum(printStr string, intNoTimes int) {
+	//ensure we print our string intNumber Of Time, intNoTimes
+	for i := 0; i < intNoTimes; i++ {
+		fmt.Println(printStr)
+	}
+}
+
 func main() {
 	//prompting user for a string they'd like revrsed
 
@@ -122,5 +131,6 @@ func main() {
 	////////////////////
 	int2Str(55)
 	evenOrOdd(31)
+	squareSum("love", 10)
 
 }
