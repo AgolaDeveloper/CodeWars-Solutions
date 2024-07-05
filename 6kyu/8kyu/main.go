@@ -102,6 +102,18 @@ func evenOrOdd(num int) {
 }
 
 // defining a squareSum function
+// Squares every number passed to it and returns the sum
+func squareSum(num ...int) {
+	sum := 0
+	//receive the number(s) passed and range through them
+	for i := 0; i < len(num); i++ {
+		sqr := num[i] * num[i]
+		sum += sqr
+		fmt.Printf("\nSQUARE OF %v is %v\n", num[i], sqr)
+	}
+	fmt.Printf("\nSUM OF THEIR SQUARES: %v\n", sum)
+
+}
 
 // defining a strRepeat function
 // accepting STRING and INT as parameter; then prints string INT number of times
@@ -133,6 +145,8 @@ func main() {
 	////////////////////
 	int2Str(55)
 	evenOrOdd(31)
-	squareSum("love", 10)
+	strRepeat("love", 10)
+
+	squareSum(2, 3, 4, 5, 10)
 
 }
