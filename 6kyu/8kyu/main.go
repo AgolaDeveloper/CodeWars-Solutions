@@ -137,6 +137,31 @@ func hopperSummation(number int) {
 	fmt.Printf("\nSum of integers from 1 to %v is %v\n", number, sum)
 }
 
+// Summing Number’s digits
+func sumNumDigits(num int) {
+	//first convert our num to a string
+	str := strconv.Itoa(num)
+
+	//then convert the string to a slice of runes
+	runes := []rune(str)
+
+	//now range through the string and sum up its data elements
+	sum := 0
+	for i := 0; i < len(runes); i++ {
+		//convert every data element of the slice runes
+		//first from a rune to a string
+		strElement := string(runes[i])
+
+		//then from string back to integer number
+		intElement, _ := strconv.Atoi(strElement)
+
+		//then finnaly sum up our converted int element
+		//sum += int(runes[i])
+		sum += intElement
+	}
+	fmt.Printf("\n sum of %v's digits: %v\n", num, sum)
+}
+
 func main() {
 	//prompting user for a string they'd like revrsed
 
@@ -162,5 +187,6 @@ func main() {
 
 	squareSum(2, 3, 4, 5, 10)
 	hopperSummation(5)
+	sumNumDigits(555)
 
 }
