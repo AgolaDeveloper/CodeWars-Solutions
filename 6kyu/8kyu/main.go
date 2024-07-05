@@ -162,6 +162,26 @@ func sumNumDigits(num int) {
 	fmt.Printf("\n sum of %v's digits: %v\n", num, sum)
 }
 
+//removing first and last character of a string
+//concept of "slice of runes" issa prerequisite
+//plus, concept of deleting data elements of a slice
+
+func removeFrstAndLst(str string) {
+	//first convert our string to a slice of runes
+	runes := []rune(str)
+
+	//now slice both the first and last characters (data elements) off
+	//... store them toanewslice of runes
+	runes1 := runes[1 : len(runes)-1]
+
+	//convert our runes1(with first and last character sliced off) back to a string
+	ourstr := string(runes1)
+
+	//then print it to the console
+
+	fmt.Printf("\nOur string before Slashing first&Last characters: %v\n", str)
+	fmt.Printf("\nAFTER SLASHING First&Last characters: %v\n ", ourstr)
+}
 func main() {
 	//prompting user for a string they'd like revrsed
 
@@ -188,5 +208,6 @@ func main() {
 	squareSum(2, 3, 4, 5, 10)
 	hopperSummation(5)
 	sumNumDigits(555)
+	removeFrstAndLst("OVALL")
 
 }
