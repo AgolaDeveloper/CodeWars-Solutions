@@ -60,6 +60,20 @@ func str2Int(str string) {
 
 }
 
+//converting NUMBER to a STRING
+
+func int2Str(num int) {
+	//use Itoa()method from strconv package...
+	//...to convert num to STRING
+
+	str := strconv.Itoa(num)
+
+	//then, we can now return ourstr,of type string
+	fmt.Println("original Integer Number: ", num)
+	fmt.Println("Already-converted String: ", str)
+
+}
+
 func main() {
 	//prompting user for a string they'd like revrsed
 
@@ -73,8 +87,12 @@ func main() {
 	reverseStr := reverseString(str)
 
 	fmt.Printf("\n OriginalString: %v \n Reversed String: %v\n", str, reverseStr)
+	//////////////////
+	/////////////////
 
 	concert := "Reggae"
 	str2Int(concert)
+	////////////////////
+	int2Str(55)
 
 }
